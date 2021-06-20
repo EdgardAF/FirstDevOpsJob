@@ -31,3 +31,10 @@ steps:
     command: 'apply'
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/aws/kubernetes'
     environmentServiceNameAWS: 'aws-terraform-junio'
+
+- task: TerraformTaskV1@0
+  inputs:
+    provider: 'aws'
+    command: 'destroy'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/aws/kubernetes'
+    environmentServiceNameAWS: 'aws-terraform-junio'
